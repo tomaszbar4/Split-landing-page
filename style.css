@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+}
+
+.container {
+    display: flex;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    text-align: center;
+}
+
+.right-side {
+    background-image:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.73)),
+        url('https://images.unsplash.com/photo-1604586376807-f73185cf5867?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+
+}
+
+.left-side {
+    background-image: linear-gradient(to bottom, rgba(3, 64, 121, 0.52), rgba(1, 61, 100, 0.73)),
+        url('https://images.unsplash.com/photo-1606318801954-d46d46d3360a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+}
+
+.left-side,
+.right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    transition: flex 0.5s ease-in-out;
+    height: 100vh;
+    flex: 1;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.left-side.active,
+.right-side.active {
+    flex: 2;
+}
+
+
+.buynow {
+    background-color: transparent;
+    outline: 2px solid #fff;
+    color: #fff;
+    border: 0;
+    text-transform: uppercase;
+    padding: 0.75rem 2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.buynow-ps:hover {
+    background-color: rgb(47, 137, 221);
+    outline: 0;
+}
+
+.buynow-xbox:hover {
+    background-color: rgb(1, 122, 56);
+    outline: 0;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1rem;
+    }
+
+    .buynow {
+        padding: 0.5rem 1rem;
+    }
+}
